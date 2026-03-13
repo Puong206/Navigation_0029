@@ -83,6 +83,38 @@ class _RegisterPageState extends State<RegisterPage> {
                       ),
                     ),
                     const SizedBox(height: 48),
+
+                    TextFormField(
+                      controller: nameController,
+                      keyboardType: TextInputType.name,
+                      textInputAction: TextInputAction.next,
+                      decoration: InputDecoration(
+                        labelText: 'Full Name',
+                        labelStyle: const TextStyle(
+                          color: MainLayout.labelColor,
+                        ),
+                        prefixIcon: const Icon(
+                          Icons.person_outline,
+                          color: MainLayout.primaryColor,
+                        ),
+                        enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(16),
+                          borderSide: const BorderSide(color: MainLayout.inputBorderColor),
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(16),
+                          borderSide: const BorderSide(color: MainLayout.primaryColor, width: 2),
+                        ),
+                        filled: true,
+                        fillColor: MainLayout.inputFillColor
+                      ),
+                      validator: (value) {
+                        if (value == null || value.isEmpty) {
+                          return 'Please enter your full name';
+                        }
+                        return null;
+                      },
+                    ),
                   ],
                 ),
               ),
