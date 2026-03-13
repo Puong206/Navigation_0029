@@ -34,8 +34,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                   ElevatedButton(
                     onPressed: () {
-                      Navigator.pushNamedAndRemoveUntil(context, '
-                          /login', (route) => false);
+                      Navigator.pushNamedAndRemoveUntil(context, '/login', (route) => false);
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.redAccent,
@@ -212,8 +211,7 @@ class _HomePageState extends State<HomePage> {
                       Container(
                         padding: const EdgeInsets.all(12),
                         decoration: BoxDecoration(
-                          color: MainLayout.accentOrange.withOpacity(0
-                              .1),
+                          color: MainLayout.accentOrange.withOpacity(0.1),
                           borderRadius: BorderRadius.circular(12),
                         ),
                         child: Icon(
