@@ -214,5 +214,61 @@ class _OrderPageState extends State<OrderPage> {
                   ),
                   const SizedBox(height: 48),
 
-                  
+                  ElevatedButton(
+                    onPressed: () {
+                      if (_formKey.currentState!.validate()) {
+                        calculateTotalPrice();
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => DetailOrderPage(
+                              jumlahMakanan: jumlahMakananController
+                                  .text,
+                              jumlahMinuman: jumlahMinumanController
+                                  .text,
+                              makanan: makananController.text,
+                              minuman: minumanController.text,
+                              totalHarga: totalHarga,
+                            ),
+                          ),
+                        );
+                      }
+                    },
+                    style: ElevatedButton.styleFrom(
+                      padding: const EdgeInsets.symmetric(vertical: 18
+                          ),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(16),
+                      ),
+                      backgroundColor: MainLayout.primaryColor,
+                      foregroundColor: Colors.white,
+                      elevation: 2,
+                      shadowColor: MainLayout.primaryColor.withOpacity
+                          (0.5),
+                    ),
+                    child: const Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(Icons.receipt_long_rounded),
+                        SizedBox(width: 8),
+                        Text(
+                          'Place Order',
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                            letterSpacing: 1.0,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(height: 24),
+                ],
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
 }
