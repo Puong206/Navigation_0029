@@ -323,6 +323,31 @@ class _HomePageState extends State<HomePage> {
                               .bold)),
                         ],
                       ),
+                      const SizedBox(height: 12),
+                      const Divider(),
+                      const SizedBox(height: 8),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment
+                            .spaceBetween,
+                        children: [
+                          const Text('Total Paid', style: TextStyle
+                              (fontWeight: FontWeight.bold)),
+                          Text(
+                            'Rp ${widget.recentOrder!['totalHarga']}',
+                            style: const TextStyle(fontWeight:
+                                FontWeight.bold, color: MainLayout
+                                .primaryColor, fontSize: 16),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                )
+              ],
+            ],
+          ),
+        ),
+      ),
     );
   }
 }
