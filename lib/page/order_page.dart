@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:navigation_route_parsing/main_layout.dart';
 
 class OrderPage extends StatefulWidget {
   const OrderPage({super.key});
@@ -74,4 +75,39 @@ class _OrderPageState extends State<OrderPage> {
       },
     );
   }
+
+  @override
+  Widget build(BuildContext context) {
+    return MainLayout(
+      title: 'Order Menu',
+      showAppBar: true,
+      child: Container(
+        color: MainLayout.backgroundColor,
+        height: double.infinity,
+        child: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 24.0,
+                vertical: 32.0),
+            child: Form(
+              key: _formKey,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  const Text(
+                    'What would you like to have?',
+                    style: TextStyle(
+                      fontSize: 22,
+                      fontWeight: FontWeight.bold,
+                      color: MainLayout.textTitleColor,
+                    ),
+                  ),
+                  const SizedBox(height: 8),
+                  const Text(
+                    'Fill in the details below to complete your order.',
+                    style: TextStyle(
+                      fontSize: 14,
+                      color: MainLayout.textSubtitleColor,
+                    ),
+                  ),
+                  const SizedBox(height: 32),
 }
