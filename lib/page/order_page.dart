@@ -29,3 +29,23 @@ class _OrderPageState extends State<OrderPage> {
       totalHarga = (jumlahMakanan * 32000) + (jumlahMinuman * 5000);
     });
   }
+
+  @override
+  void dispose() {
+    makananController.dispose();
+    minumanController.dispose();
+    jumlahMakananController.dispose();
+    jumlahMinumanController.dispose();
+    super.dispose();
+  }
+
+  Widget _buildInputDecoration({
+    required TextEditingController controller,
+    required String label,
+    required IconData icon,
+    TextInputType keyboardType = TextInputType.text,
+    required String errorMessage,
+  }) {
+    
+  }
+}
