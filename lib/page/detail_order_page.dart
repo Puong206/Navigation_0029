@@ -167,7 +167,48 @@ class DetailOrderPage extends StatelessWidget {
                   ),
                   const SizedBox(height: 48),
 
-                  
+                  SizedBox(
+                    width: double.infinity,
+                    child: ElevatedButton(
+                      onPressed: () {
+                        Navigator.pushAndRemoveUntil(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => HomePage(
+                              recentOrder: {
+                                'makanan': makanan,
+                                'minuman': minuman,
+                                'jumlahMakanan': jumlahMakanan,
+                                'jumlahMinuman': jumlahMinuman,
+                                'totalHarga': totalHarga,
+                              },
+                            ),
+                          ),
+                          (route) => false,
+                        );
+                      },
+                      style: ElevatedButton.styleFrom(
+                        padding: const EdgeInsets.symmetric(vertical: 18
+                            ),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(16),
+                        ),
+                        backgroundColor: MainLayout.primaryColor,
+                        foregroundColor: Colors.white,
+                        elevation: 2,
+                        shadowColor: MainLayout.primaryColor.withOpacity
+                            (0.5),
+                      ),
+                      child: const Text(
+                        'Back to Home',
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                          letterSpacing: 1.0,
+                        ),
+                      ),
+                    ),
+                  ),
                 ],
               ),
             ),
