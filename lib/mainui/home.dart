@@ -294,6 +294,35 @@ class _HomePageState extends State<HomePage> {
                         ],
                       ),
                       const SizedBox(height: 12),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment
+                            .spaceBetween,
+                        children: [
+                          Text('Food: \n${widget
+                              .recentOrder!['makanan']}', style:
+                              TextStyle(color: MainLayout
+                              .textSubtitleColor)),
+                          Text('x${widget
+                              .recentOrder!['jumlahMakanan']}', style:
+                              const TextStyle(fontWeight: FontWeight
+                              .bold)),
+                        ],
+                      ),
+                      const SizedBox(height: 8),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment
+                            .spaceBetween,
+                        children: [
+                          Text('Drink: \n${widget
+                              .recentOrder!['minuman']}', style:
+                              TextStyle(color: MainLayout
+                              .textSubtitleColor)),
+                          Text('x${widget
+                              .recentOrder!['jumlahMinuman']}', style:
+                              const TextStyle(fontWeight: FontWeight
+                              .bold)),
+                        ],
+                      ),
     );
   }
 }
