@@ -83,7 +83,16 @@ class _HomePageState extends State<HomePage> {
                         ],
                       ),
                       const SizedBox(height: 4),
-                      
+
+                      Text(
+                        'What do you want to order today?',
+                        style: TextStyle(
+                          fontSize: 14,
+                          color: MainLayout.textSubtitleColor,
+                        ),
+                      ),
+                    ],
+                  ),
     );
   }
 }
