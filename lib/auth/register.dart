@@ -20,4 +20,15 @@ class _RegisterPageState extends State<RegisterPage> {
     passwordController.dispose();
     super.dispose();
   }
+
+  @override
+  Widget build(BuildContext context) {
+    return MainLayout(
+      title: 'Register',
+      showAppBar: false,
+      child: Container(
+        color: MainLayout.backgroundColor,
+      )
+    )
+  }
 }
