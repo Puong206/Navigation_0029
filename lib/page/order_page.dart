@@ -110,4 +110,55 @@ class _OrderPageState extends State<OrderPage> {
                     ),
                   ),
                   const SizedBox(height: 32),
+
+                  Container(
+                    padding: const EdgeInsets.all(20),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(20),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withOpacity(0.05),
+                          blurRadius: 10,
+                          offset: const Offset(0, 4),
+                        )
+                      ],
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const Row(
+                          children: [
+                            Icon(Icons.fastfood_rounded, color:
+                                MainLayout.accentOrange),
+                            SizedBox(width: 8),
+                            Text(
+                              'Food Details',
+                              style: TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                                color: MainLayout.textTitleColor,
+                              ),
+                            ),
+                          ],
+                        ),
+                        const SizedBox(height: 16),
+                        _buildInputDecoration(
+                          controller: makananController,
+                          label: 'Food Name',
+                          icon: Icons.lunch_dining_rounded,
+                          errorMessage: 'Please enter your food order',
+                        ),
+                        const SizedBox(height: 16),
+                        _buildInputDecoration(
+                          controller: jumlahMakananController,
+                          label: 'Quantity (Food)',
+                          icon: Icons.format_list_numbered_rounded,
+                          keyboardType: TextInputType.number,
+                          errorMessage: 'Please enter food quantity',
+                        ),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(height: 24),
 }
