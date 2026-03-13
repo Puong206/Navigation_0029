@@ -62,6 +62,28 @@ class _LoginPageState extends State<LoginPage> {
                       },
                     ),
                     const SizedBox(height: 40),
+
+                    const Text(
+                      'Welcome Back!',
+                      textAlign: TextAlign.left,
+                      style: TextStyle(
+                        fontSize: 32,
+                        fontWeight: FontWeight.w800,
+                        color: MainLayout.textTitleColor,
+                        letterSpacing: -0.5
+                      ),
+                    ),
+                    const SizedBox(height: 8),
+                    const Text(
+                      'Sign in to your account to continue',
+                      textAlign: TextAlign.left,
+                      style: TextStyle(
+                        fontSize: 16,
+                        color: MainLayout.textSubtitleColor,
+                      ),
+                    ),
+                    const SizedBox(height: 48),
+                    
                   ],
                 ),
               ),
