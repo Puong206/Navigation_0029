@@ -96,6 +96,77 @@ class DetailOrderPage extends StatelessWidget {
                   ),
                   const SizedBox(height: 40),
 
+                  Container(
+                    padding: const EdgeInsets.all(24),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(24),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withOpacity(0.08),
+                          blurRadius: 20,
+                          offset: const Offset(0, 8),
+                        ),
+                      ],
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const Center(
+                          child: Text(
+                            'RECEIPT',
+                            style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                              letterSpacing: 2.0,
+                              color: MainLayout.labelColor,
+                            ),
+                          ),
+                        ),
+                        const SizedBox(height: 16),
+                        const Divider(thickness: 1, color: MainLayout
+                            .inputBorderColor),
+                        const SizedBox(height: 16),
+
+                        const Text(
+                          'Food Details',
+                          style: TextStyle(fontWeight: FontWeight.bold,
+                              fontSize: 16, color: MainLayout
+                              .accentOrange),
+                        ),
+                        const SizedBox(height: 8),
+                        _buildReceiptRow('Item Name', makanan),
+                        _buildReceiptRow('Quantity', 'x$jumlahMakanan'),
+
+                        const SizedBox(height: 16),
+                        const Divider(thickness: 1, color: MainLayout
+                            .inputBorderColor),
+                        const SizedBox(height: 16),
+
+                        const Text(
+                          'Drink Details',
+                          style: TextStyle(fontWeight: FontWeight.bold,
+                              fontSize: 16, color: Colors.blue),
+                        ),
+                        const SizedBox(height: 8),
+                        _buildReceiptRow('Item Name', minuman),
+                        _buildReceiptRow('Quantity', 'x$jumlahMinuman'),
+
+                        const SizedBox(height: 16),
+                        const Divider(thickness: 1.5, color: Colors
+                            .black12),
+                        const SizedBox(height: 16),
+
+                        _buildReceiptRow(
+                          'Total Price',
+                          'Rp $totalHarga',
+                          isTotal: true,
+                        ),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(height: 48),
+
                   
                 ],
               ),
