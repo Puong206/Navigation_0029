@@ -190,7 +190,67 @@ class _HomePageState extends State<HomePage> {
               ),
               const SizedBox(height: 16),
 
-              
+              InkWell(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const
+                        OrderPage()),
+                  );
+                },
+                borderRadius: BorderRadius.circular(16),
+                child: Container(
+                  padding: const EdgeInsets.all(16),
+                  decoration: BoxDecoration(
+                    color: MainLayout.inputFillColor,
+                    borderRadius: BorderRadius.circular(16),
+                    border: Border.all(color: MainLayout
+                        .inputBorderColor),
+                  ),
+                  child: Row(
+                    children: [
+                      Container(
+                        padding: const EdgeInsets.all(12),
+                        decoration: BoxDecoration(
+                          color: MainLayout.accentOrange.withOpacity(0
+                              .1),
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                        child: Icon(
+                          Icons.restaurant_menu_rounded,
+                          color: MainLayout.accentOrange,
+                          size: 32,
+                        ),
+                      ),
+                      const SizedBox(width: 16),
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Start New Order',
+                              style: TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                                color: MainLayout.textTitleColor,
+                              ),
+                            ),
+                            const SizedBox(height: 4),
+                            Text(
+                              'Browse our delicious menu',
+                              style: TextStyle(
+                                fontSize: 13,
+                                color: MainLayout.textSubtitleColor,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              const SizedBox(height: 32),
     );
   }
 }
