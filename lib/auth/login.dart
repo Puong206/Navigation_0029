@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:navigation_route_parsing/auth/register.dart';
 import 'package:navigation_route_parsing/main_layout.dart';
 
 class LoginPage extends StatefulWidget {
@@ -187,7 +188,35 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                     const SizedBox(height: 24),
 
-                    
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        const Text(
+                          'Don\'t have an account?',
+                          style: TextStyle(
+                            color: MainLayout.textSubtitleColor,
+                          ),
+                        ),
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) =>
+                                const RegisterPage()
+                              )
+                            );
+                          },
+                          child: const Text(
+                            ' Sign Up',
+                            style: TextStyle(
+                              color: MainLayout.accentYellow,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 15,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
                   ],
                 ),
               ),
