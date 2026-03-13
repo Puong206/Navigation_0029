@@ -128,6 +128,27 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ],
                 ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Container(
+                      padding: const EdgeInsets.symmetric(horizontal:
+                          12, vertical: 6),
+                      decoration: BoxDecoration(
+                        color: MainLayout.accentYellow,
+                        borderRadius: BorderRadius.circular(8),
+                      ),
+                      child: const Text(
+                        'PROMO 50%',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 12,
+                        ),
+                      ),
+                    ),
+                    const SizedBox(height: 12),
+                    
     );
   }
 }
