@@ -161,4 +161,58 @@ class _OrderPageState extends State<OrderPage> {
                     ),
                   ),
                   const SizedBox(height: 24),
+
+                  Container(
+                    padding: const EdgeInsets.all(20),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(20),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withOpacity(0.05),
+                          blurRadius: 10,
+                          offset: const Offset(0, 4),
+                        )
+                      ],
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const Row(
+                          children: [
+                            Icon(Icons.local_drink_rounded, color:
+                                Colors.blue),
+                            SizedBox(width: 8),
+                            Text(
+                              'Drink Details',
+                              style: TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                                color: MainLayout.textTitleColor,
+                              ),
+                            ),
+                          ],
+                        ),
+                        const SizedBox(height: 16),
+                        _buildInputDecoration(
+                          controller: minumanController,
+                          label: 'Drink Name',
+                          icon: Icons.coffee_rounded,
+                          errorMessage: 'Please enter your drink order'
+                              ,
+                        ),
+                        const SizedBox(height: 16),
+                        _buildInputDecoration(
+                          controller: jumlahMinumanController,
+                          label: 'Quantity (Drink)',
+                          icon: Icons.format_list_numbered_rounded,
+                          keyboardType: TextInputType.number,
+                          errorMessage: 'Please enter drink quantity',
+                        ),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(height: 48),
+
+                  
 }
