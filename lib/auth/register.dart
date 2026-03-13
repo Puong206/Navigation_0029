@@ -149,6 +149,39 @@ class _RegisterPageState extends State<RegisterPage> {
                       },
                     ),
                     const SizedBox(height: 16),
+
+                    TextFormField(
+                      controller: passwordController,
+                      obscureText: true,
+                      textInputAction: TextInputAction.done,
+                      decoration: InputDecoration(
+                        labelText: 'Password',
+                        labelStyle: const TextStyle(
+                          color: MainLayout.labelColor,
+                        ),
+                        prefixIcon: const Icon(
+                          Icons.lock_outline,
+                          color: MainLayout.primaryColor,
+                        ),
+                        enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(16),
+                          borderSide: const BorderSide(color: MainLayout.inputBorderColor),
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(16),
+                          borderSide: const BorderSide(color: MainLayout.primaryColor, width: 2),
+                        ),
+                        filled: true,
+                        fillColor: MainLayout.inputFillColor
+                      ),
+                      validator: (value) {
+                        if (value == null || value.isEmpty) {
+                          return 'Please enter your password';
+                        }
+                        return null;
+                      },
+                    ),
+                    const SizedBox(height: 32),
                   ],
                 ),
               ),
