@@ -277,6 +277,23 @@ class _HomePageState extends State<HomePage> {
                       )
                     ],
                   ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Row(
+                        children: [
+                          Icon(Icons.check_circle_rounded, color:
+                              Colors.green),
+                          SizedBox(width: 8),
+                          Text(
+                            'Order Successful',
+                            style: TextStyle(fontWeight: FontWeight
+                                .bold, fontSize: 16, color: Colors
+                                .green),
+                          ),
+                        ],
+                      ),
+                      const SizedBox(height: 12),
     );
   }
 }
