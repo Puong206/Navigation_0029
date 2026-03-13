@@ -32,8 +32,10 @@ class _RegisterPageState extends State<RegisterPage> {
         child: Center(
           child: SingleChildScrollView(
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 32.0, 
-                vertical: 24.0),
+              padding: const EdgeInsets.symmetric(
+                horizontal: 32.0,
+                vertical: 24.0,
+              ),
               child: Form(
                 key: _formKey,
                 child: Column(
@@ -62,6 +64,17 @@ class _RegisterPageState extends State<RegisterPage> {
                       },
                     ),
                     const SizedBox(height: 32),
+                    const Text(
+                      'Create Account',
+                      textAlign: TextAlign.left,
+                      style: TextStyle(
+                        fontSize: 32,
+                        fontWeight: FontWeight.w800,
+                        color: MainLayout.textTitleColor,
+                        letterSpacing: -0.5,
+                      ),
+                    ),
+                    const SizedBox(height: 8),
                     Text(
                       'Sign up to get started',
                       style: TextStyle(
@@ -69,13 +82,14 @@ class _RegisterPageState extends State<RegisterPage> {
                         color: MainLayout.textSubtitleColor,
                       ),
                     ),
+                    const SizedBox(height: 48),
                   ],
                 ),
               ),
             ),
           ),
         ),
-      )
+      ),
     );
   }
 }
