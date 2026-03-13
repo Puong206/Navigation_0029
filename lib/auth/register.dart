@@ -231,7 +231,7 @@ class _RegisterPageState extends State<RegisterPage> {
                               context,
                               MaterialPageRoute(builder: (context) => 
                                 const LoginPage()),
-                            )
+                            );
                           },
                           child: const Text(
                             ' Log In',
