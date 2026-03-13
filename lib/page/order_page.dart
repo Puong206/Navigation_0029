@@ -46,6 +46,32 @@ class _OrderPageState extends State<OrderPage> {
     TextInputType keyboardType = TextInputType.text,
     required String errorMessage,
   }) {
-    
+    return TextFormField(
+      controller: controller,
+      keyboardType: keyboardType,
+      decoration: InputDecoration(
+        labelText: label,
+        labelStyle: const TextStyle(color: MainLayout.labelColor),
+        prefixIcon: Icon(icon, color: MainLayout.primaryColor),
+        enabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(16),
+          borderSide: const BorderSide(color: MainLayout
+              .inputBorderColor),
+        ),
+        focusedBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(16),
+          borderSide: const BorderSide(color: MainLayout.primaryColor,
+              width: 2),
+        ),
+        filled: true,
+        fillColor: MainLayout.inputFillColor,
+      ),
+      validator: (value) {
+        if (value == null || value.isEmpty) {
+          return errorMessage;
+        }
+        return null;
+      },
+    );
   }
 }
