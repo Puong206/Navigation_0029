@@ -62,6 +62,13 @@ class _RegisterPageState extends State<RegisterPage> {
                       },
                     ),
                     const SizedBox(height: 32),
+                    Text(
+                      'Sign up to get started',
+                      style: TextStyle(
+                        fontSize: 16,
+                        color: MainLayout.textSubtitleColor,
+                      ),
+                    ),
                   ],
                 ),
               ),
