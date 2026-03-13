@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:navigation_route_parsing/main_layout.dart';
 
 class HomePage extends StatefulWidget {
   final Map<String, dynamic>? recentOrder;
@@ -49,7 +50,40 @@ class _HomePageState extends State<HomePage> {
         ),
       ],
 
-      
+      child: Container(
+        color: MainLayout.backgroundColor,
+        width: double.infinity,
+        child: Padding(
+          padding: const EdgeInsets.all(24.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        children: [
+                          Text(
+                            'Hello, User!',
+                            style: TextStyle(
+                              fontSize: 24,
+                              fontWeight: FontWeight.bold,
+                              color: MainLayout.textTitleColor,
+                            ),
+                          ),
+                          const SizedBox(width: 8),
+                          // Icon(
+                          //   Icons.waving_hand_rounded,
+                          //   color: MainLayout.accentYellow,
+                          //   size: 24,
+                          // ),
+                        ],
+                      ),
+                      const SizedBox(height: 4),
+                      
     );
   }
 }
