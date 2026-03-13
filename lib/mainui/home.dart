@@ -180,6 +180,16 @@ class _HomePageState extends State<HomePage> {
               ),
               const SizedBox(height: 32),
 
+              Text(
+                'Top Menu',
+                style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                  color: MainLayout.textTitleColor,
+                ),
+              ),
+              const SizedBox(height: 16),
+
               
     );
   }
