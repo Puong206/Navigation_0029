@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:navigation_route_parsing/main_layout.dart';
+import 'package:navigation_route_parsing/page/detail_order_page.dart';
 
 class OrderPage extends StatefulWidget {
   const OrderPage({super.key});
