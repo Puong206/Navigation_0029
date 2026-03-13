@@ -16,4 +16,12 @@ class MainLayout extends StatelessWidget{
   final String title;
   final bool showAppBar;
   final List<Widget>? actions;
+
+  const MainLayout({
+    super.key,
+    required this.child,
+    this.title = '',
+    this.showAppBar = true,
+    this.actions,
+  });
 }
